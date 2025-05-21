@@ -5,17 +5,24 @@
 
 // define Order class
 class Order {
-    // not sure if these should be public or private
     public:
-        int idNumber;
+        double idNumber;
         bool buyOrSell;
-        int shares;
-        int limit;
-        int entryTime;
-        int eventTime;
+        double shares;
+        double limit;
+        double entryTime;
+        double eventTime;
         Order* nextOrder;
         Order* PrevOrder;
         Limit* parentLimit;
+
+        Order(); // constructor
+
+        int pushOrder(Limit* limit, Order* new_order);
+
+        Order* popOrder(Limit* limit);
+
+        int removeOrder(Order* order);
 };
 
 
