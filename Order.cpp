@@ -1,5 +1,5 @@
-#include "Order.h"
+#include "HFTLOB.h"
 
-Order::Order(): idNumber(0), buyOrSell(-1), shares(0), limit(0), entryTime(0), eventTime(0), nextOrder(nullptr), PrevOrder(nullptr), parentLimit(nullptr) {}
+Order::Order(int idNumber, bool isBuy, int shares, int limit): idNumber(idNumber), isBuy(isBuy), shares(shares), limit(limit), entryTime(), eventTime(), nextOrder(nullptr), PrevOrder(nullptr), parentLimit(nullptr) {}
 
-// to do: write out all the functions
+
